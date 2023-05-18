@@ -499,6 +499,21 @@ def chord_truc(bar, schord):
         schord_list = schord_list[:chord_num]
     else:
         tmp = []
+
+        if schord_list == ['']:
+            schord_list = [random.choice(["C:","C:m","C:+","C:dim","C:7","C:maj7","C:m7","C:m7b5",
+                                         "C#:","C#:m","C#:+","C#im","C#:7","C#:maj7","C#:m7","C#:m7b5",
+                                         "D:","D:m","D:+","D:dim","D:7","D:maj7","D:m7","D:m7b5",
+                                         "Eb:","Eb:m","Eb:+","Eb:dim","Eb:7","Eb:maj7","Eb:m7","Eb:m7b5",
+                                         "E:","E:m","E:+","E:dim","E:7","E:maj7","E:m7","E:m7b5",
+                                         "F:","F:m","F:+","F:dim","F:7","F:maj7","F:m7","F:m7b5",
+                                         "F#:","F#:m","F#:+","F#:dim","F#:7","F#:maj7","F#:m7","F#:m7b5",
+                                         "G:","G:m","G:+","G:dim","G:7","G:maj7","G:m7","G:m7b5",
+                                         "Ab:","Ab:m","Ab:+","Ab:dim","Ab:7","Ab:maj7","Ab:m7","Ab:m7b5",
+                                         "A:","A:m","A:+","A:dim","A:7","A:maj7","A:m7","A:m7b5",
+                                         "Bb:","Bb:m","Bb:+","Bb:dim","Bb:7","Bb:maj7","Bb:m7","Bb:m7b5",
+                                         "B:","B:m","B:+","B:dim","B:7","B:maj7","B:m7","B:m7b5"])]
+        
         for i in schord_list:
             tmp.append(i)
             tmp.append(i)
