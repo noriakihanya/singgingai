@@ -25,4 +25,3 @@ cnsenti
 textblob
 fugashi
 ipadic
-protobuf==3.20.0
