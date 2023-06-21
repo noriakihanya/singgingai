@@ -9,7 +9,7 @@ pretty_midi
 PyYAML
 pypianoroll
 fairseq==0.10.0
-torch==1.3
+torch==1.13
 pypinyin==0.39.1
 jieba==0.42.1
 tensorboard==2.4.0
