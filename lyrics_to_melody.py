@@ -634,8 +634,6 @@ if __name__ == '__main__':
                     else:
                         is_maj = 0
 
-                    is_maj = random.choice([0,1])
-
             print('Tonality:', is_maj)
 
             # structure recognition
