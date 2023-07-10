@@ -626,9 +626,9 @@ if __name__ == '__main__':
                     for s in sentence:
                         result = nlp(s)
                         if result[0]['label'] == "ネガティブ":
-                            polarity_ja_list += result[0]['score'] * -1
+                            polarity_ja_list.append(result[0]['score'] * -1)
                         else:
-                            polarity_ja_list += result[0]['score']
+                            polarity_ja_list.append(result[0]['score'])
 
                     polarity_ja_list_diff = [polarity_ja_list[i+1] - polarity_ja_list[i] for i in range(len(polarity_ja_list) - 1)]
                     polarity_ja = sum(polarity_ja_list_diff)
