@@ -622,19 +622,22 @@ if __name__ == '__main__':
 
                 if use_sentiment=="True" or use_sentiment=="true":
                     polarity_ja = 0
+                    polarity_ja_list = []
                     for s in sentence:
                         result = nlp(s)
                         if result[0]['label'] == "ネガティブ":
-                            polarity_ja += result[0]['score'] * -1
+                            polarity_ja_list += result[0]['score'] * -1
                         else:
-                            polarity_ja += result[0]['score']
+                            polarity_ja_list += result[0]['score']
 
+                    polarity_ja_list_diff = [polarity_ja_list[i+1] - polarity_ja_list[i] for i in range(len(polarity_ja_list) - 1)]
+                    polarity_ja = sum(polarity_ja_list_diff)
                     if polarity_ja >= 0:
                         is_maj = 1
                     else:
                         is_maj = 0
 
-            print('Tonality:', is_maj)
+            print('Tonality:', is_maj, polarity_ja)
 
             # structure recognition
             parent, chorus_start, chorus_length = Lyrics_match(
