@@ -1,4 +1,4 @@
- *__SingingAI__*：Google Colabで動くAIシンガーソングライター
+# *__SingingAI__*：Google Colabで動くAIシンガーソングライター
 ### 作詞：ChatGPT（モデル：gpt-3.5-turbo-16k） (https://github.com/openai/openai-python)
 ### 作曲：Re-creation of Creations（ROC） (https://github.com/microsoft/muzic/tree/main/roc)
 ### 歌：NEUTRINO (https://studio-neutrino.com/)
